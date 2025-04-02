@@ -222,7 +222,7 @@
             
             <label id="label"></label><br>   
             <div class ="button-group">    
-            	<input type="button" value="로그인" onclick="loginCheck()">
+            	<input type="button" value="로그인" onclick="loginCheck(); login();">
             	<input type="button" value="취소" onclick="location.href='index'"><br>
             </div> 
         </form>

@@ -184,6 +184,24 @@
 
 <script src="dbQuiz.js"></script>
 
+  <script>
+    async function login() {
+      const id = document.getElementById("id").value;
+      const pw = document.getElementById("pw").value;
+
+      const res = await fetch("https://sg1yxe3oyg.execute-api.ap-northeast-2.amazonaws.com/beta/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "include", // 세션이 필요한 경우
+        body: JSON.stringify({ id, pw })
+      });
+
+      const data = await res.json();
+      document.getElementById("result").textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
 
 
 <div id="container">
